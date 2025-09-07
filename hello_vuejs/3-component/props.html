@@ -1,0 +1,26 @@
+
+<div id="app">
+    <child-component v-bind:propsdata="message"></child-component>
+    <!-- 위의 출력 결과는 hello vue.js -->
+</div>
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script>
+    // 하위 컴포넌트 : childComponent
+    var childComponent = {
+        props: ['propsdata'],
+        template: '<p>Hello {{ propsdata }}</p>'
+    }
+
+    // 상위 컴포넌트 : root 컴포넌트
+    Vue.createApp({
+        components: {
+            'child-component': childComponent
+        },
+        data() {
+            return {
+                message: 'vue.js'
+            }
+        }
+    }).mount('#app');
+</script>

@@ -1,0 +1,49 @@
+
+<div id="app">
+    <app-header v-bind:app-title="rootTitle"></app-header>
+    <app-contents v-on:login="logined"></app-contents>
+
+</div>
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script>
+    let appHeader = {
+        props: ['appTitle'],
+        template: '<p>{{appTitle}}</p>',
+        // data() {
+        //     return {
+        //         appTitle: 'Please Login'
+        //     }
+        // }
+    }
+    let appContents = {
+        template: `
+        <p>
+            <button v-on:click="sendEvent">Login</button>
+        </p>
+        `,
+        methods: {
+            sendEvent() {
+                this.$emit('login');
+            }
+        }
+    }
+
+    Vue.createApp({
+        components: {
+            'app-header': appHeader,
+            'app-contents': appContents
+        },
+        methods: {
+            logined() {
+                console.log('received login event')
+                this.rootTitle = 'Logined'
+            }
+        },
+        data() {
+            return {
+                rootTitle: 'Please Login'
+            }
+        }
+    }).mount("#app");
+</script>

@@ -115,3 +115,125 @@ Vue.createApp({
 ## 컴포넌트 DevTool 확인
 
 ![component devtool](img/component-devtool.png)
+
+## 통신 방식
+
+뷰 컴포넌트는 각각 고유한 데이터 유효 범위를 갖습니다. 따라서, 컴포넌트 간에 데이터를 주고 받기 위해선 아래와 같은 규칙을 따라야 합니다.
+
+![component communication](img/component-communication.png)
+
+- 상위에서 하위로는 데이터를 내려줌, Props 속성
+- 하위에서 상위로는 이벤트를 올려줌, Event 발생
+
+### Props
+
+프롭스 속성은 컴포넌트 간에 데이터를 전달할 수 있는 컴포넌트 통신 방법입니다. 프롭스 속성을 기억할 때는 상위 컴포넌트에서 하위 컴포넌트로 내려보내는 데이터 속성으로 기억하면 쉽습니다.
+
+vue2
+```vue
+// 하위 컴포넌트 : childComponent
+var childComponent = {
+  props: ['propsdata'],
+  template: '<p>{{ propsdata }}</p>'
+}
+
+// 상위 컴포넌트 : root 컴포넌트
+new Vue({
+  el: '#app',
+  components: {
+    'child-component': childComponent
+  },
+  data: {
+    message: 'hello vue.js'
+  }
+})
+```
+
+vue3
+```vue
+// 하위 컴포넌트 : childComponent
+var childComponent = {
+  props: ['propsdata'],
+  template: '<p>{{ propsdata }}</p>'
+}
+
+// 상위 컴포넌트 : root 컴포넌트
+Vue.createApp({
+  components: {
+    'child-component': childComponent
+  },
+  data: {
+    message: 'hello vue.js'
+  }
+}).mount('#app');
+```
+
+```html
+<div id="app">
+  <child-component v-bind:propsdata="message"></child-component>
+  <!-- 위의 출력 결과는 hello vue.js -->
+</div>
+```
+
+![props devtool](img/props-devtool.png)
+
+### Event Emit
+
+이벤트 발생은 컴포넌트의 통신 방법 중 하위 컴포넌트에서 상위 컴포넌트로 통신하는 방식입니다.
+
+vue2
+```vue
+// 하위 컴포넌트 : childComponent
+var childComponent = {
+  methods: {
+    sendEvent: function() {
+      this.$emit('update');
+    }
+  }
+}
+
+// 상위 컴포넌트 : root 컴포넌트
+new Vue({
+  el: '#app',
+  components: {
+    'child-component': childComponent
+  },
+  methods: {
+    showAlert: function() {
+      alert('event received');
+    }
+  }
+})
+```
+
+vue3
+```vue
+// 하위 컴포넌트 : childComponent
+var childComponent = {
+  methods: {
+    sendEvent: function() {
+      this.$emit('update');
+    }
+  }
+}
+
+// 상위 컴포넌트 : root 컴포넌트
+Vue.createApp({
+  components: {
+    'child-component': childComponent
+  },
+  methods: {
+    showAlert: function() {
+      alert('event received');
+    }
+  }
+}).mount('#app')
+```
+
+```html
+<div id="app">
+  <child-component v-on:update="showAlert"></child-component>
+</div>
+```
+
+![event emit devtool](img/event_emit-devtool.png)
