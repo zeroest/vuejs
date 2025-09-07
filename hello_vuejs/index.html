@@ -4,10 +4,16 @@
     {{ message }}
 </div>
 
-
 <script>
-    const { createApp } = Vue;
+    // Vue2
+    // new Vue({
+    //     el: '#app2'
+    // })
+    // or
+    // new Vue({}).mount('#app')
 
+    // Vue3
+    const { createApp } = Vue;
     createApp({
         data() {
             return {
