@@ -111,3 +111,7 @@ Vue.createApp({
   }
 })
 ```
+
+## 컴포넌트 DevTool 확인
+
+![component devtool](img/component-devtool.png)

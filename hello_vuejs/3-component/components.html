@@ -1,0 +1,24 @@
+
+<div id="app">
+    <app-header></app-header>
+    <app-header2></app-header2>
+</div>
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script>
+    var appHeader2 = {
+        template: '<h1>Header Component</h1>'
+    }
+
+    const { createApp } = Vue;
+    createApp({
+        // 인스턴스 옵션 속성 - 옵션 API
+        components: {
+            // '컴포넌트 이름': 컴포넌트 내용
+            'app-header': {
+                template: '<h1>This is new Component</h1>'
+            },
+            'app-header2': appHeader2
+        }
+    }).mount('#app');
+</script>
