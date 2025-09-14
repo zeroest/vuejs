@@ -1,0 +1,42 @@
+
+<div id="app">
+<!--    <p v-if="login">Hello</p>-->
+<!--    <p v-else-if="preLogin">pre login</p>-->
+<!--    <p v-else>Please Login</p>-->
+    <p v-if="login === 'END'">
+        Hello
+        <span v-show="login === 'END'">Welcome</span>
+    </p>
+    <p v-else-if="login === 'MIDDLE'">Login processing</p>
+    <p v-else>Please Login</p>
+
+    <hr>
+    <button v-on:click="onClickLogin">Login</button>
+</div>
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script>
+    Vue.createApp({
+        data() {
+            return {
+                // login: false
+                // login: loginStatus[0],
+                login: "START",
+                loginStatus: ["START", "MIDDLE", "END"]
+            }
+        },
+        methods: {
+            onClickLogin() {
+                // this.login = !this.login;
+                if (this.login === 'START') {
+                    this.login = this.loginStatus[1];
+                } else if (this.login === 'MIDDLE') {
+                    this.login = this.loginStatus[2];
+                } else {
+                    this.login = this.loginStatus[0];
+                }
+            }
+        }
+
+    }).mount("#app");
+</script>

@@ -1,0 +1,39 @@
+<style>
+    .primary {
+        color: coral;
+    }
+    /*#tab1 {*/
+    /*    color: blue;*/
+    /*}*/
+</style>
+
+<div id="app">
+<!--  Class 바인딩  -->
+    <h1>Class binding</h1>
+<!--    <div class="primary">data binding example</div>-->
+<!--    <div v-bind:class="textClass">data binding example</div>-->
+    <div :class="textClass">data binding example</div>
+
+    <hr>
+
+<!--  Id 바인딩  -->
+    <h1>Id binding</h1>
+<!--    <section id="tab1">Hello</section>-->
+<!--    <section v-bind:id="sectionId">Hello</section>-->
+<!--    <section :id="sectionId" style="color: red">Hello</section>-->
+    <section :id="sectionId" :style="sectionStyle">Hello</section>
+</div>
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script>
+    Vue.createApp({
+        data() {
+            return {
+                textClass: 'primary',
+                sectionId: 'tab1',
+                sectionStyle: { color: 'red' }
+            }
+        },
+
+    }).mount("#app");
+</script>
