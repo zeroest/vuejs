@@ -1,26 +1,28 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <form action="">
+    <div>
+      <label for="userId">ID:</label>
+      <input id="userId" type="text" v-model="username">
+    </div>
+    <div>
+      <label for="password">PW:</label>
+      <input id="password" type="password" v-model="password">
+    </div>
+    <button type="submit">로그인</button>
+  </form>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+  data() {
+    return {
+      username: '',
+      password: ''
+    }
+  },
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style scoped>
+
 </style>
