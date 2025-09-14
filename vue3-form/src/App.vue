@@ -17,32 +17,52 @@
 
 <script>
 import axios from 'axios';
+import {ref} from "vue";
 
 export default {
-  data() {
-    return {
-      username: '',
-      password: ''
-    }
-  },
-  methods: {
-    submitForm(/*event*/) {
-      // form 기본 기능인 submit 되었을때 새로고침 방지
-      // event.preventDefault();
-      console.log('submitted')
-      console.log(`username: ${this.username}`)
-      console.log(`password: ${this.password}`)
+  setup() {
+    var username = ref('');
+    var password = ref('');
 
-      // https://jsonplaceholder.typicode.com/
-      const data = {
-        username: this.username,
-        password: this.password
-      };
-      axios.post('https://jsonplaceholder.typicode.com/users', data).then(response => {
+    var submitForm = () => {
+      axios.post('https://jsonplaceholder.typicode.com/users', {
+        username: username.value,
+        password: password.value
+      }).then(response => {
         console.log(response)
       })
     }
+
+    return {
+      username,
+      password,
+      submitForm
+    }
   }
+  // data() {
+  //   return {
+  //     username: '',
+  //     password: ''
+  //   }
+  // },
+  // methods: {
+  //   submitForm(/*event*/) {
+  //     // form 기본 기능인 submit 되었을때 새로고침 방지
+  //     // event.preventDefault();
+  //     console.log('submitted')
+  //     console.log(`username: ${this.username}`)
+  //     console.log(`password: ${this.password}`)
+  //
+  //     // https://jsonplaceholder.typicode.com/
+  //     const data = {
+  //       username: this.username,
+  //       password: this.password
+  //     };
+  //     axios.post('https://jsonplaceholder.typicode.com/users', data).then(response => {
+  //       console.log(response)
+  //     })
+  //   }
+  // }
 }
 </script>
 
