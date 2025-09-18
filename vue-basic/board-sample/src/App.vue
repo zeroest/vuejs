@@ -7,6 +7,8 @@ import ReactivityApi from '@/components/2-composition_api/ReactivityApi.vue';
 import LifecycleHooks from '@/components/2-composition_api/LifecycleHooks.vue';
 // setup hook
 import SetupHook from '@/components/3-setup_hook/SetupHook.vue';
+// template syntax
+import TemplateSyntax from '@/components/4-template_syntax/TemplateSyntax.vue';
 </script>
 
 <template>
@@ -20,6 +22,8 @@ import SetupHook from '@/components/3-setup_hook/SetupHook.vue';
 	<LifecycleHooks></LifecycleHooks>
 	<hr />
 	<SetupHook title1="testTitle1" title2="testTitle2"></SetupHook>
+	<hr />
+	<TemplateSyntax></TemplateSyntax>
 </template>
 
 <style></style>
