@@ -5,6 +5,8 @@ import CounterOptionsApi from '@/components/1-options_vs_composition_api/Counter
 // composition api
 import ReactivityApi from '@/components/2-composition_api/ReactivityApi.vue';
 import LifecycleHooks from '@/components/2-composition_api/LifecycleHooks.vue';
+// setup hook
+import SetupHook from '@/components/3-setup_hook/SetupHook.vue';
 </script>
 
 <template>
@@ -16,6 +18,8 @@ import LifecycleHooks from '@/components/2-composition_api/LifecycleHooks.vue';
 	<hr />
 	<ReactivityApi></ReactivityApi>
 	<LifecycleHooks></LifecycleHooks>
+	<hr />
+	<SetupHook title1="testTitle1" title2="testTitle2"></SetupHook>
 </template>
 
 <style></style>
