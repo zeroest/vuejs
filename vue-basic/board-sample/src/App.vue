@@ -9,21 +9,37 @@ import LifecycleHooks from '@/components/2-composition_api/LifecycleHooks.vue';
 import SetupHook from '@/components/3-setup_hook/SetupHook.vue';
 // template syntax
 import TemplateSyntax from '@/components/4-template_syntax/TemplateSyntax.vue';
+// reactive
+import Reactive from '@/components/5-reactive/Reactive.vue';
+import ReactiveRef from '@/components/5-reactive/ReactiveRef.vue';
+import ReactiveDestructuring from '@/components/5-reactive/ReactiveDestructuring.vue';
+import ReactiveReadonly from '@/components/5-reactive/ReactiveReadonly.vue';
 </script>
 
 <template>
 	<div>Hello Vue3</div>
-	<hr />
-	<CounterCompositionApi></CounterCompositionApi>
-	<hr />
-	<CounterOptionsApi></CounterOptionsApi>
-	<hr />
-	<ReactivityApi></ReactivityApi>
-	<LifecycleHooks></LifecycleHooks>
-	<hr />
-	<SetupHook title1="testTitle1" title2="testTitle2"></SetupHook>
-	<hr />
-	<TemplateSyntax></TemplateSyntax>
+	<div class="column">
+		<hr />
+		<CounterCompositionApi></CounterCompositionApi>
+		<hr />
+		<CounterOptionsApi></CounterOptionsApi>
+		<hr />
+		<ReactivityApi></ReactivityApi>
+		<LifecycleHooks></LifecycleHooks>
+	</div>
+	<div class="column">
+		<hr />
+		<SetupHook title1="testTitle1" title2="testTitle2"></SetupHook>
+		<hr />
+		<TemplateSyntax></TemplateSyntax>
+		<hr />
+		<Reactive></Reactive>
+		<ReactiveRef></ReactiveRef>
+		<ReactiveDestructuring></ReactiveDestructuring>
+		<ReactiveReadonly></ReactiveReadonly>
+	</div>
 </template>
 
-<style></style>
+<style>
+@import '@/../public/2column_layout.css';
+</style>

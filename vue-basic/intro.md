@@ -28,3 +28,4 @@ https://gymcoding.notion.site/Vue-js-3-cd9bb8ec6fec4ba9b388c808caf61880
 !: html 기본 프레임 생성
 
 vbase: single file component base
+vbase-3: vue3 single file component base
