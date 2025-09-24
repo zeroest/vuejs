@@ -17,6 +17,7 @@ import ReactiveReadonly from '@/components/5-reactive/ReactiveReadonly.vue';
 import Computed from '@/components/6-computed/Computed.vue';
 import WritableComputed from '@/components/6-computed/WritableComputed.vue';
 import ClassStyleBind from '@/components/7-class_style_bind/ClassStyleBind.vue';
+import Conditional from '@/components/8-condition_rendering/Conditional.vue';
 </script>
 
 <template>
@@ -45,6 +46,7 @@ import ClassStyleBind from '@/components/7-class_style_bind/ClassStyleBind.vue';
 	</div>
 	<div class="column">
 		<ClassStyleBind></ClassStyleBind>
+		<Conditional></Conditional>
 	</div>
 </template>
 
