@@ -16,6 +16,7 @@ import ReactiveDestructuring from '@/components/5-reactive/ReactiveDestructuring
 import ReactiveReadonly from '@/components/5-reactive/ReactiveReadonly.vue';
 import Computed from '@/components/6-computed/Computed.vue';
 import WritableComputed from '@/components/6-computed/WritableComputed.vue';
+import ClassStyleBind from '@/components/7-class_style_bind/ClassStyleBind.vue';
 </script>
 
 <template>
@@ -41,6 +42,9 @@ import WritableComputed from '@/components/6-computed/WritableComputed.vue';
 		<ReactiveReadonly></ReactiveReadonly>
 		<Computed></Computed>
 		<WritableComputed></WritableComputed>
+	</div>
+	<div class="column">
+		<ClassStyleBind></ClassStyleBind>
 	</div>
 </template>
 
