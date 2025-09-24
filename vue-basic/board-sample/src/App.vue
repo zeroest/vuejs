@@ -14,6 +14,8 @@ import Reactive from '@/components/5-reactive/Reactive.vue';
 import ReactiveRef from '@/components/5-reactive/ReactiveRef.vue';
 import ReactiveDestructuring from '@/components/5-reactive/ReactiveDestructuring.vue';
 import ReactiveReadonly from '@/components/5-reactive/ReactiveReadonly.vue';
+import Computed from '@/components/6-computed/Computed.vue';
+import WritableComputed from '@/components/6-computed/WritableComputed.vue';
 </script>
 
 <template>
@@ -26,17 +28,19 @@ import ReactiveReadonly from '@/components/5-reactive/ReactiveReadonly.vue';
 		<hr />
 		<ReactivityApi></ReactivityApi>
 		<LifecycleHooks></LifecycleHooks>
-	</div>
-	<div class="column">
 		<hr />
 		<SetupHook title1="testTitle1" title2="testTitle2"></SetupHook>
 		<hr />
 		<TemplateSyntax></TemplateSyntax>
+	</div>
+	<div class="column">
 		<hr />
 		<Reactive></Reactive>
 		<ReactiveRef></ReactiveRef>
 		<ReactiveDestructuring></ReactiveDestructuring>
 		<ReactiveReadonly></ReactiveReadonly>
+		<Computed></Computed>
+		<WritableComputed></WritableComputed>
 	</div>
 </template>
 
