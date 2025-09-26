@@ -18,6 +18,7 @@ import Computed from '@/components/6-computed/Computed.vue';
 import WritableComputed from '@/components/6-computed/WritableComputed.vue';
 import ClassStyleBind from '@/components/7-class_style_bind/ClassStyleBind.vue';
 import Conditional from '@/components/8-condition_rendering/Conditional.vue';
+import VFor from '@/components/9-v_for/VFor.vue';
 </script>
 
 <template>
@@ -47,6 +48,7 @@ import Conditional from '@/components/8-condition_rendering/Conditional.vue';
 	<div class="column">
 		<ClassStyleBind></ClassStyleBind>
 		<Conditional></Conditional>
+		<VFor></VFor>
 	</div>
 </template>
 
