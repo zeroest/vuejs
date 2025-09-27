@@ -23,6 +23,8 @@ import MouseEventHandle from '@/components/10-event/MouseEventHandle.vue';
 import KeyboardEventHandler from '@/components/10-event/KeyboardEventHandler.vue';
 import EventModifierEventHandler from '@/components/10-event/EventModifierEventHandler.vue';
 import KeyModifierEventHandler from '@/components/10-event/KeyModifierEventHandler.vue';
+
+import VModel from '@/components/11-two_way_binding/VModel.vue';
 </script>
 
 <template>
@@ -55,10 +57,12 @@ import KeyModifierEventHandler from '@/components/10-event/KeyModifierEventHandl
 	<!--		<VFor></VFor>-->
 	<!--	</div>-->
 
-	<MouseEventHandle></MouseEventHandle>
-	<KeyboardEventHandler></KeyboardEventHandler>
-	<EventModifierEventHandler></EventModifierEventHandler>
-	<KeyModifierEventHandler></KeyModifierEventHandler>
+	<!--	<MouseEventHandle></MouseEventHandle>-->
+	<!--	<KeyboardEventHandler></KeyboardEventHandler>-->
+	<!--	<EventModifierEventHandler></EventModifierEventHandler>-->
+	<!--	<KeyModifierEventHandler></KeyModifierEventHandler>-->
+
+	<VModel></VModel>
 </template>
 
 <style>
