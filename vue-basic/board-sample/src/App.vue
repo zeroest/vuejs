@@ -25,6 +25,9 @@ import EventModifierEventHandler from '@/components/10-event/EventModifierEventH
 import KeyModifierEventHandler from '@/components/10-event/KeyModifierEventHandler.vue';
 
 import VModel from '@/components/11-two_way_binding/VModel.vue';
+import WatchFunction from '@/components/12-watch/WatchFunction.vue';
+import WatchImmediate from '@/components/12-watch/WatchImmediate.vue';
+import WatchEffect from '@/components/12-watch/WatchEffect.vue';
 </script>
 
 <template>
@@ -62,7 +65,11 @@ import VModel from '@/components/11-two_way_binding/VModel.vue';
 	<!--	<EventModifierEventHandler></EventModifierEventHandler>-->
 	<!--	<KeyModifierEventHandler></KeyModifierEventHandler>-->
 
-	<VModel></VModel>
+	<!--	<VModel></VModel>-->
+
+	<WatchFunction></WatchFunction>
+	<WatchImmediate></WatchImmediate>
+	<WatchEffect></WatchEffect>
 </template>
 
 <style>
