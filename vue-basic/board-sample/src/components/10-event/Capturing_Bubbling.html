@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<style>
+    * {
+        font-size: 20px;
+        font-weight: bold;
+        padding: 50px;
+        background-color: #eee;
+    }
+
+    body {
+        background-color: #ddd;
+    }
+
+    main {
+        background-color: #ccc;
+    }
+
+    div {
+        background-color: #bbb;
+    }
+
+    p {
+        background-color: #aaa;
+    }
+
+    span {
+        display: block;
+        background-color: #888;
+    }
+</style>
+<body>
+Body 영역
+<main>
+  Main 영역
+  <div>
+    Div 영역
+    <p>
+      P 영역
+      <span>Span 영역</span>
+    </p>
+  </div>
+  <a href="https://naver.com">네이버 이동</a>
+</main>
+</body>
+<script>
+  // https://developer.mozilla.org/ko/docs/Web/API/Event/eventPhase
+
+  const $a = document.querySelector("a");
+  $a.addEventListener("click", (event) => {
+    // event.preventDefault();
+    console.log("[" + event.eventPhase + "] capturing a 태그");
+  }, true);
+  $a.addEventListener("click", (event) => {
+    event.preventDefault(); // submit 또는 a 태그와 같이 기본 동작을 막음
+    console.log("[" + event.eventPhase + "] bubbling a 태그");
+  });
+
+  const $body = document.querySelector("body");
+  const $main = document.querySelector("main");
+  const $div = document.querySelector("div");
+  const $p = document.querySelector("p");
+  const $span = document.querySelector("span");
+
+  // capturing
+  $body.addEventListener("click", (event) => {
+    console.log("[" + event.eventPhase + "] capturing body 태그");
+  }, true);
+  $main.addEventListener("click", (event) => {
+    console.log("[" + event.eventPhase + "] capturing main 태그");
+  }, true);
+  $div.addEventListener("click", (event) => {
+    console.log("[" + event.eventPhase + "] capturing div 태그");
+  }, true);
+  $p.addEventListener("click", (event) => {
+    // event.stopPropagation() // 캡쳐링 단계에서 이벤트 전파 중단
+    console.log("[" + event.eventPhase + "] capturing p 태그");
+  }, true);
+  $span.addEventListener("click", (event) => {
+    console.log("[" + event.eventPhase + "] capturing span 태그");
+  }, true);
+
+  // bubbling
+  $span.addEventListener("click", (event) => {
+    // event.stopPropagation() // 버블링 단계에서 이벤트 전파 중단
+    console.log("[" + event.eventPhase + "] bubbling span 태그");
+  }, false);
+  $p.addEventListener("click", (event) => {
+    console.log("[" + event.eventPhase + "] bubbling p 태그");
+  });
+  $div.addEventListener("click", (event) => {
+    console.log("[" + event.eventPhase + "] bubbling div 태그");
+  });
+  $main.addEventListener("click", (event) => {
+    console.log("[" + event.eventPhase + "] bubbling main 태그");
+  });
+  $body.addEventListener("click", (event) => {
+    console.log("[" + event.eventPhase + "] bubbling body 태그");
+  });
+
+  /*
+  [1] capturing body 태그
+  [1] capturing main 태그
+  [1] capturing div 태그
+  [1] capturing p 태그
+  [2] capturing span 태그
+  [2] bubbling span 태그
+  [3] bubbling p 태그
+  [3] bubbling div 태그
+  [3] bubbling main 태그
+  [3] bubbling body 태그
+  */
+
+</script>
+</html>

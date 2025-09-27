@@ -19,37 +19,46 @@ import WritableComputed from '@/components/6-computed/WritableComputed.vue';
 import ClassStyleBind from '@/components/7-class_style_bind/ClassStyleBind.vue';
 import Conditional from '@/components/8-condition_rendering/Conditional.vue';
 import VFor from '@/components/9-v_for/VFor.vue';
+import MouseEventHandle from '@/components/10-event/MouseEventHandle.vue';
+import KeyboardEventHandler from '@/components/10-event/KeyboardEventHandler.vue';
+import EventModifierEventHandler from '@/components/10-event/EventModifierEventHandler.vue';
+import KeyModifierEventHandler from '@/components/10-event/KeyModifierEventHandler.vue';
 </script>
 
 <template>
 	<div>Hello Vue3</div>
-	<div class="column">
-		<hr />
-		<CounterCompositionApi></CounterCompositionApi>
-		<hr />
-		<CounterOptionsApi></CounterOptionsApi>
-		<hr />
-		<ReactivityApi></ReactivityApi>
-		<LifecycleHooks></LifecycleHooks>
-		<hr />
-		<SetupHook title1="testTitle1" title2="testTitle2"></SetupHook>
-		<hr />
-		<TemplateSyntax></TemplateSyntax>
-	</div>
-	<div class="column">
-		<hr />
-		<Reactive></Reactive>
-		<ReactiveRef></ReactiveRef>
-		<ReactiveDestructuring></ReactiveDestructuring>
-		<ReactiveReadonly></ReactiveReadonly>
-		<Computed></Computed>
-		<WritableComputed></WritableComputed>
-	</div>
-	<div class="column">
-		<ClassStyleBind></ClassStyleBind>
-		<Conditional></Conditional>
-		<VFor></VFor>
-	</div>
+	<!--	<div class="column">-->
+	<!--		<hr />-->
+	<!--		<CounterCompositionApi></CounterCompositionApi>-->
+	<!--		<hr />-->
+	<!--		<CounterOptionsApi></CounterOptionsApi>-->
+	<!--		<hr />-->
+	<!--		<ReactivityApi></ReactivityApi>-->
+	<!--		<LifecycleHooks></LifecycleHooks>-->
+	<!--		<hr />-->
+	<!--		<SetupHook title1="testTitle1" title2="testTitle2"></SetupHook>-->
+	<!--		<hr />-->
+	<!--		<TemplateSyntax></TemplateSyntax>-->
+	<!--	</div>-->
+	<!--	<div class="column">-->
+	<!--		<hr />-->
+	<!--		<Reactive></Reactive>-->
+	<!--		<ReactiveRef></ReactiveRef>-->
+	<!--		<ReactiveDestructuring></ReactiveDestructuring>-->
+	<!--		<ReactiveReadonly></ReactiveReadonly>-->
+	<!--		<Computed></Computed>-->
+	<!--		<WritableComputed></WritableComputed>-->
+	<!--	</div>-->
+	<!--	<div class="column">-->
+	<!--		<ClassStyleBind></ClassStyleBind>-->
+	<!--		<Conditional></Conditional>-->
+	<!--		<VFor></VFor>-->
+	<!--	</div>-->
+
+	<MouseEventHandle></MouseEventHandle>
+	<KeyboardEventHandler></KeyboardEventHandler>
+	<EventModifierEventHandler></EventModifierEventHandler>
+	<KeyModifierEventHandler></KeyModifierEventHandler>
 </template>
 
 <style>
