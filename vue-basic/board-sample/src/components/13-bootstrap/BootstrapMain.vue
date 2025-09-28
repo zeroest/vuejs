@@ -1,5 +1,6 @@
 <template>
 	<div>
+		<GlobalComponent></GlobalComponent>
 		<Navbar></Navbar>
 		<GridComponent></GridComponent>
 	</div>

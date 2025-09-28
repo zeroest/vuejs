@@ -18,8 +18,10 @@
 </template>
 
 <script>
+console.log('CardComponent module');
 export default {
 	setup() {
+		console.log('CardComponent setup()');
 		return {};
 	},
 };
