@@ -28,6 +28,8 @@ import VModel from '@/components/11-two_way_binding/VModel.vue';
 import WatchFunction from '@/components/12-watch/WatchFunction.vue';
 import WatchImmediate from '@/components/12-watch/WatchImmediate.vue';
 import WatchEffect from '@/components/12-watch/WatchEffect.vue';
+import NavbarComponent from '@/components/13-bootstrap/NavbarComponent.vue';
+import BootstrapMain from '@/components/13-bootstrap/BootstrapMain.vue';
 </script>
 
 <template>
@@ -67,9 +69,11 @@ import WatchEffect from '@/components/12-watch/WatchEffect.vue';
 
 	<!--	<VModel></VModel>-->
 
-	<WatchFunction></WatchFunction>
-	<WatchImmediate></WatchImmediate>
-	<WatchEffect></WatchEffect>
+	<!--	<WatchFunction></WatchFunction>-->
+	<!--	<WatchImmediate></WatchImmediate>-->
+	<!--	<WatchEffect></WatchEffect>-->
+
+	<BootstrapMain></BootstrapMain>
 </template>
 
 <style>
