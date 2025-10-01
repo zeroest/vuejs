@@ -28,8 +28,8 @@ import VModel from '@/components/11-two_way_binding/VModel.vue';
 import WatchFunction from '@/components/12-watch/WatchFunction.vue';
 import WatchImmediate from '@/components/12-watch/WatchImmediate.vue';
 import WatchEffect from '@/components/12-watch/WatchEffect.vue';
-import TheNavbar from '@/components/13-bootstrap/TheNavbar.vue';
-import TheMain from '@/components/13-bootstrap/TheMain.vue';
+import NavbarComponent from '@/components/13-bootstrap/NavbarComponent.vue';
+import TheMain from '@/components/14-props/TheMain.vue';
 </script>
 
 <template>
