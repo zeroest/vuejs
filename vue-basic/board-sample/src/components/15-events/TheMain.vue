@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import TheNavbar from '@/components/14-props/TheNavbar.vue';
-import TheGrid from '@/components/14-props/TheGrid.vue';
+import TheNavbar from '@/components/15-events/TheNavbar.vue';
+import TheGrid from '@/components/15-events/TheGrid.vue';
 
 export default {
 	components: { TheGrid, TheNavbar },

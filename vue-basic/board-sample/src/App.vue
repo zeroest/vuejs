@@ -29,7 +29,7 @@ import WatchFunction from '@/components/12-watch/WatchFunction.vue';
 import WatchImmediate from '@/components/12-watch/WatchImmediate.vue';
 import WatchEffect from '@/components/12-watch/WatchEffect.vue';
 import NavbarComponent from '@/components/13-bootstrap/NavbarComponent.vue';
-import TheMain from '@/components/14-props/TheMain.vue';
+import TheMain from '@/components/15-events/TheMain.vue';
 </script>
 
 <template>

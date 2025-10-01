@@ -33,7 +33,7 @@
 </template>
 
 <script>
-import AppCard from '@/components/13-bootstrap/AppCard.vue';
+import AppCard from '@/components/14-props/AppCard.vue';
 import { reactive } from 'vue';
 
 export default {
